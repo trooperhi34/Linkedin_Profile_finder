@@ -3,12 +3,17 @@ import streamlit as st
 import openai
 from serpapi import GoogleSearch
 
-# Load API keys from environment variables or replace with your keys directly (not recommended)
-import streamlit as st
-import os
 
-openai.api_key = st.secrets["OPENAI_API_KEY", vOpenAPIKey]
+import os
+import streamlit as st
+import openai
+
+# Securely load keys from Streamlit secrets
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 SERPAPI_KEY = st.secrets["SERPAPI_KEY"]
+
+
+
 
 
 
